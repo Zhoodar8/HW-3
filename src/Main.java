@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Main {
 
 
@@ -7,7 +10,9 @@ public class Main {
         names[0] = "Ban";
         names[1] = "Mick";
         names[2] = "Ford";
-
+    String[] newName = Arrays.copyOf(names, names.length+1);
+             newName[3]="Will";
+             names = newName;
 
         for (String name : names) {
 
@@ -26,13 +31,15 @@ public class Main {
                     System.out.println("Добрый вечер!" + name);
                     break;
 
-
-
-
-
-
+                case "Will":
+                    System.out.println("Доброй ночи!" + name);
+                    break;
             }
+
+
         }
+
+
     }
 
 }
